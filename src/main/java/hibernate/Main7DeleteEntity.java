@@ -1,6 +1,6 @@
-package Hibernate;
+package hibernate;
 
-import Hibernate.entity.Dog;
+import hibernate.entity.Dog;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

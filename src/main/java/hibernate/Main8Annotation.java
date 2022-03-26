@@ -1,8 +1,6 @@
-package Hibernate;
+package hibernate;
 
-import Hibernate.HibernateUtils;
-import Hibernate.entity.Address;
-import Hibernate.entity.Employee;
+import hibernate.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -11,27 +9,19 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Main9Embedded {
+public class Main8Annotation {
     public static void main(String[] args) throws ParseException {
         SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-
-        Address address = new Address("Otwock","Andriollego");
-
-        Date date = new SimpleDateFormat("dd/MM/yyyy").parse("11/05/1997");
-        Employee employee = new Employee("Ola", "strongPassword", "567656108",
-                21, date, Employee.Gender.FEMALE, "descriptoin");
-        employee.setAddress(address);
-
-        address.setStreet("Chopina");
+        Date date = new SimpleDateFormat("dd/MM/yyyy").parse("31/12/1998");
+        Employee employee = new Employee("Jan", "strongPassword", "235876108",
+                20, date, Employee.Gender.MALE, "descriptoin");
         session.persist(employee);
 
         transaction.commit();
         session.close();
-
-        // nowy obiekt wboudowany
 
     }
 }

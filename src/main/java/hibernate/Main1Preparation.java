@@ -1,9 +1,6 @@
-package Hibernate;
+package hibernate;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class Main1Preparation {
     //        MetadataSources metadataSources = new MetadataSources(registry);

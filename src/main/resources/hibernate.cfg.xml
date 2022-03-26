@@ -9,10 +9,11 @@
         <property name="show_sql">true</property>
         <property name="format_sql">false</property>
         <property name="use.sql_comments">true</property>
-        <mapping class ="Hibernate.entity.Dog"/>
-        <mapping class ="Hibernate.entity.Employee"/>
-        <mapping class ="Hibernate.entity.Wife"/>
-        <mapping class ="Hibernate.entity.Husband"/>
+        <mapping class ="hibernate.entity.Dog"/>
+        <mapping class ="hibernate.entity.Employee"/>
+        <mapping class ="hibernate.entity.Wife"/>
+        <mapping class ="hibernate.entity.Husband"/>
+        <mapping class ="hibernate.entity.Address"/>
     </session-factory>
 </hibernate-configuration>
 

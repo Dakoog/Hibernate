@@ -1,19 +1,19 @@
-package Hibernate.entity;
+package hibernate.entity;
 
-import lombok.*;
-import net.bytebuddy.build.HashCodeAndEqualsPlugin;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.sql.PreparedStatement;
 
-@Data
-@NoArgsConstructor
 @Entity
-@Table(name="dog")
+@Table(name = "dog")
+@NoArgsConstructor
+@Data
 public class Dog {
+
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
     private Integer age;
     private String race;
@@ -23,7 +23,5 @@ public class Dog {
         this.age = age;
         this.race = race;
     }
-
 }
-
 
